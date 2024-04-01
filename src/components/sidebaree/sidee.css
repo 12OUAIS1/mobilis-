@@ -26,14 +26,14 @@ a:hover {
 }
 
 .app {
-  height: 100vh;
+  height: 55vh;
 }
 
 /* Sidebar */
 .sidebar {
   position: absolute;
   width: 17em;
-  height: 500px;
+  height: 300px;
   margin-top: 150px;
   overflow: hidden;
   -webkit-transform: translateZ(0);
@@ -64,11 +64,11 @@ a:hover {
   position: fixed;
   margin-top: 25px;
   background-color: #c9d3d0;
-  height: 500px;
+  height: 300px;
   font-weight: 400;
   font-size: 1.2em;
   overflow: auto;
-  padding-bottom:2 em;
+  padding-bottom:0.5 em;
   z-index: 9;
   overflow: hidden;
   -webkit-overflow-scrolling: touch;

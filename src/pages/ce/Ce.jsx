@@ -2,20 +2,27 @@ import React from 'react'
 import Navbar from '../../components/nav/Navbar'
 import Footer from '../../components/footer/Footer'
 import Sidee from '../../components/sidebaree/Sidee'
+import { MdGroups } from "react-icons/md";
+import "./ce.css"
 const Ce = () => {
   return (
     <div>
       <Navbar/>
       <div className="econtainer">
-        <h1>Découvrez ici les produits et services pour les particuliers de Mobilis</h1>
+      <div className="eitems"> <Sidee/></div>
+        <div className="eitems">
+       <div className="etxt">
+       <h1>Découvrez ici les produits et services pour les Entreprise de Mobilis</h1>
         <p>
 
-Ils ont été conçus pour vous proposer des offres pour appels et navigation sur Internet diversifiés et innovants, destinés à s'adapter à vos besoins de consommation, avec une tarification simplifiée et transparente.
+        Pour mieux comprendre vos besoins et vous conseiller sur les services, produits et solutions qui accompagneront le développement de votre activité, des responsables de comptes hautement qualifiés sont à votre écoute.
 
-Mobilis vous simplifie la vie et vous permet de recharger votre compte mobile et/ou Internet à distance avec « Arsselli » et « Sellekni »,
-
-Découvrez encore de nombreux autres services conçus pour vous accompagner et faciliter votre quotidien.</p>
-      <Sidee/>
+Découvrez ici les offres et solutions Mobilis spécialement conçus pour répondre à vos besoins spécifiques en matière de télécommunication :
+</p>
+       </div>
+          </div>
+      
+      
       </div>
       
       <Footer/>

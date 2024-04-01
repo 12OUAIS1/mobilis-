@@ -13,10 +13,12 @@ const Homelg = () => {
               <h2>Login and choose the offer that suits you</h2>
               <p>Please enter your phone number</p>
             </div>
-            <div className="log">
-              <input placeholder="ex:0667825.." type="text" />
-             <Link to="/login"> <button className="logbtn" >Login</button></Link>
-            </div>
+           <div className="logon">
+           <Link to="/login">
+    <button className="logonbtn">Login</button>
+  </Link>
+           </div>
+
           </div>
         </div>
       </div>

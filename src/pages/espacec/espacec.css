@@ -2,6 +2,10 @@
     margin-top: 100px;
     margin-bottom: 120px;
 }
+.espcard a {
+    text-decoration: none;
+  }
+  
 .est {
     display: flex;
     justify-content: center; /* Horizontally center the content */
@@ -33,6 +37,7 @@
     gap: .5em;
     display: grid;
     place-content: center;
+    text-decoration: none;
    }
    
    .cardc-button {
@@ -55,12 +60,14 @@
 
 .text-bodyc {
     color: rgb(134, 134, 134);
+    text-decoration: none;
    }
    
    /*Text*/
    .text-titlec {
     font-size: 1.5em;
     font-weight: bold;
+    text-decoration: none;
    }
    .icoc {
     display: flex;
