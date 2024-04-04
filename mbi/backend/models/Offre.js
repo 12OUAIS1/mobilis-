@@ -1,19 +1,26 @@
 const mongoose = require("mongoose");
 const offreSchema = new mongoose.Schema(
     {
-      offre:{
+      namee: {
         type: String,
         unique: true,
+        required: true,
+    },
+    numberr: {
+        type: Number,
+        unique: true,
+        required: true,
+    },
+      offre:{
+        type: String,
         required:true,
       } ,
       net:{
         type: Number,
-        unique: true,
         required:true,
       },
       days:{
-        type: Number,
-        unique: true,
+        type: Date,
         required:true,
       }  ,
       user: [
@@ -23,4 +30,4 @@ const offreSchema = new mongoose.Schema(
         },
     ],
     })
-module.export = mongoose.model("Offre",offreSchema);
+module.exports = mongoose.model("Offre",offreSchema);
