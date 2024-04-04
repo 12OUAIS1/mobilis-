@@ -9,6 +9,7 @@ import { GrMoney } from "react-icons/gr";
 import Slider from '../../components/carousel/Slider';
 import Oswiper from "../../components/swiper/Oswiper"
 const Userv = () => {
+  
   return (
     <div>
       <Navbar/>

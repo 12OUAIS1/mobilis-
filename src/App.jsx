@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Espacec from "./pages/espacec/espacec";
 import Home from "./pages/home/Home";
@@ -13,7 +13,16 @@ import Ce from "./pages/ce/Ce";
 import Userv from "./pages/userv/Userv";
 import Slider from "./components/carousel/Slider";
 import Oswiper from "./components/swiper/Oswiper";
+import { useDispatch } from 'react-redux'; 
+import { authActions } from './store';
 function App() {
+  const dispatch = useDispatch();
+  useEffect(()=> {
+    const id = sessionStorage.getItem("id")
+   if (id){
+    dispatch(authActions.login());
+  }
+    })
   return (
     <BrowserRouter>
       <Routes>

@@ -1,6 +1,29 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import "./flipc.css"
+let id = sessionStorage.getItem("id");
+
 const Flipc = () => {
+  const [AllEvents, setAllEvents] = useState({
+    namee: "",
+    numberr: "",
+    offre:"",
+    net: "",
+    days: ""
+  });
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`http://localhost:1000/api/v3/getoffre/${id}`);
+        setAllEvents(response.data.list);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchData();
+  }, []);
   return (
     <div>
       <div class="flip-card">
@@ -36,9 +59,9 @@ const Flipc = () => {
               LTEzVDA4OjE1OjI5KzAwOjAwY2+u1gAAAABJRU5ErkJggg=="></image>
             </svg>
             
-            <p class="number">+213 06 62 93 39 93</p>
+            <p class="number">+213 {AllEvents.numberr}</p>
             <p className="typeo">Type offre</p>
-            <p className="o">twenty</p>
+            <p className="o">{AllEvents.offre}</p>
             <p className="credit">mon credit</p>
             <p className="c">00 DA</p>
             <p className="appel">rest appel</p>
